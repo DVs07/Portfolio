@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
-/*-------------------------*/
-/*      Variables CSS      */
-/*-------------------------*/
+/*  =====================
+        Variables CSS      
+    =====================*/
 :root{
     --header-height: 3rem;
     --nav-width: 324px;
@@ -50,9 +50,9 @@
     }
 }
 
-/*-------------------------*/
-/*          BASE           */
-/*-------------------------*/
+/*  ===================
+            BASE           
+    ===================*/
 *,::before,::after{
     box-sizing: border-box;
 }
@@ -307,6 +307,11 @@ img{
 .skills-name{
     text-transform: uppercase;
 }
+.skills-number{
+    font-size: 25px;
+    position: absolute;
+    margin-left: 80%;
+}
 .skills-bar{
     position: absolute;
     bottom: -.75rem;
@@ -318,6 +323,12 @@ img{
 }
 .skills-js{
     width: 50%;
+}
+.skills-jq{
+    width: 50%;
+}
+.skills-bt{
+    width: 60%;
 }
 .skills-java{
     width: 40%;
@@ -476,4 +487,41 @@ img{
 }
 .footer-copy{
     font-size: var(--smaller-font-size);
+}
+/*  =====================
+        Media Queries
+    =====================
+*/
+@media screen and (min-width: 768px){
+    .home-btn{
+        width: initial;
+    }
+    .nav-menu{
+        width: var(--nav-width);
+    }
+    .about-container,.skills-container, .works-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .about-data{
+        text-align: initial;
+    }
+    .about-description{
+        margin-bottom: var(--mb-5);
+        padding-left: 1rem;
+    }
+    .about-img{
+        width: 220px;
+    }
+    .about-information{
+        padding-left: 4rem;
+    }
+    .about-information-title{
+        text-align: center;
+    }
+    .skills-subtitle{
+        text-align: center;
+    }
+    .education-container{
+        padding: 0 6rem;
+    }
 }
