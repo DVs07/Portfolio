@@ -1,7 +1,8 @@
 /*      Menu show & hidden      */
 const navMenu = document.getElementById('menu'),
 toggleMenu = document.getElementById('toggle'),
-closeMenu = document.getElementById('close');;
+closeMenu = document.getElementById('close');
+checkBox = document.getElementById('checkbox');
 
 
 //SHOW
@@ -41,3 +42,7 @@ function scrollActive(){
         }
     })
 }
+/*      Change theme    */
+checkBox.addEventListener('change', () =>{
+    document.body.classList.toggle('dark');
+})
